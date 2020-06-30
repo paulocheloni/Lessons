@@ -11,8 +11,8 @@ if [ -e $CAMINHO ]
             done
             echo "o diretorio  $CAMINHO tem $COUNT arquivos"
 
-            else 
-                echo "o caminho $CAMINHO nao e diretorio"
+        else 
+            echo "o caminho $CAMINHO nao e diretorio"
         fi
 else 
     echo "o caminho $CAMINHO nao existe"

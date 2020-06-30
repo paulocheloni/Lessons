@@ -1,5 +1,5 @@
 #!/bin/bash
-clear
+# eu sou tryber e...
 VAR=$*
 
 if [ -f $VAR ]

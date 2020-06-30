@@ -1,5 +1,5 @@
 #!/bin/bash
-clear
+# Vou ter muito sucesso em programaçao 
 VAR=$*
 
 if [ -f $VAR ]

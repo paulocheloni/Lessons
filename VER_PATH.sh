@@ -1,5 +1,9 @@
 #!/bin/bash
-clear
+
+# eu sou tryber e...
+=======
+# Vou ter muito sucesso em programaçao 
+
 VAR=$*
 
 if [ -f $VAR ]

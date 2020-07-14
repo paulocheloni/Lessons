@@ -128,7 +128,7 @@ function Exercise3_2Bonus_NewxOld(numbers){
 }
 console.log(Exercise3_2Bonus_NewxOld(numbers));
 
-function Exercise3_2Bonus_NewxOld(numbers){
+function Exercise3_Bonus_NewxOld(numbers){
     let multiplicador, newNumber
     let newArray = [];
     for (i=0;i<numbers.length;i+=1){

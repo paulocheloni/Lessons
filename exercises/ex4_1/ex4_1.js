@@ -129,3 +129,70 @@ function ContainNotEven(){
     return answer
     }  
    console.log(ContainNotEven(2,1,2));
+
+function CalculaLucro(valorVenda,custoProduto){
+    if(valorVenda < 0 || custoProduto < 0){
+        return "erro , valor invalido"
+    }
+    else{
+        custoReal = custoProduto * 1.2;
+        return 1000*(valorVenda-custoReal)
+    } 
+}
+
+console.log(CalculaLucro(1000,800));
+
+    function CalcSalarioBase(salarioBruto){
+        let salarioBase;
+        let aliquotaReducao;
+        switch (true) {
+            case salarioBruto > 5189.82: salarioBase = salarioBruto - 570.88
+            break;
+
+            case salarioBruto >= 2594.93 && salarioBruto <= 5189.82: salarioBase = salarioBruto *0.89 
+            break;
+
+            case salarioBruto >= 1556.95 && salarioBruto <= 2594.92: salarioBase = salarioBruto * 0.91
+            break;
+
+            case salarioBruto <= 1556.94 : salarioBase = salarioBruto * 0.92
+            break;
+        }
+        return salarioBase
+    }
+
+    function CalcSalarioLiquido(salarioBase) {
+        let salarioLiquido;
+        let aliquotaReducao;
+        switch (true) {
+            case salarioBase <= 1903.98 : salarioLiquido = salarioBase                
+                break;
+
+            case salarioBase >=1903.99 && salarioBase <= 2826.65 :
+                aliquotaReducao = (salarioBase *0.075) - 142.8 
+                
+            break;
+            
+            case salarioBase >= 2826.66 && salarioBase <= 3751.05 : 
+                aliquotaReducao = (salarioBase * 0.15) - 354.8
+                
+            break;
+
+            case salarioBase >= 3751.06 && salarioBase <= 4664.68 : 
+                aliquotaReducao = (salarioBase * 0.225) - 636.13
+                
+            break;
+
+            case salarioBase > 4664.68 : 
+                aliquotaReducao =  (salarioBase * 0.275) - 869.36
+                
+            break;
+            
+            default:
+                break;           
+        }
+        salarioLiquido = salarioBase - aliquotaReducao;
+        return salarioLiquido
+    }
+
+console.log(CalcSalarioLiquido(CalcSalarioBase(3000)))

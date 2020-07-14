@@ -165,27 +165,24 @@ console.log(CalculaLucro(1000,800));
         let salarioLiquido;
         let aliquotaReducao;
         switch (true) {
-            case salarioBase <= 1903.98 : salarioLiquido = salarioBase                
-                break;
+            case salarioBase <= 1903.98 :
+                salarioLiquido = salarioBase                
+            break;
 
             case salarioBase >=1903.99 && salarioBase <= 2826.65 :
-                aliquotaReducao = (salarioBase *0.075) - 142.8 
-                
+                aliquotaReducao = (salarioBase *0.075) - 142.8                 
             break;
             
             case salarioBase >= 2826.66 && salarioBase <= 3751.05 : 
-                aliquotaReducao = (salarioBase * 0.15) - 354.8
-                
+                aliquotaReducao = (salarioBase * 0.15) - 354.8                
             break;
 
             case salarioBase >= 3751.06 && salarioBase <= 4664.68 : 
-                aliquotaReducao = (salarioBase * 0.225) - 636.13
-                
+                aliquotaReducao = (salarioBase * 0.225) - 636.13                
             break;
 
             case salarioBase > 4664.68 : 
-                aliquotaReducao =  (salarioBase * 0.275) - 869.36
-                
+                aliquotaReducao =  (salarioBase * 0.275) - 869.36                
             break;
             
             default:

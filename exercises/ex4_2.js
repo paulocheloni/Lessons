@@ -60,8 +60,7 @@ Exercise5_Maior(numbers);
 function Exercise6_ContaImpar(numbers){
     let count = 0
     for (let i in numbers){
-        numbers[i] % 2 !== 0 && numbers[i] > 1 ? count+=1 : count; 
-          
+        numbers[i] % 2 !== 0 && numbers[i] > 1 ? count+=1 : count;          
     }
     count > 0 ? console.log(count) : console.log('nao exitem valores impares');
     

@@ -68,8 +68,7 @@ function piramid(n){
     const totem= Math.ceil(n/2);
     // fazendo a  ultima linha e armazenando em Array
     for(let j=1;j<=n;j+=1){
-        secondLine.push(character);
-        secondLine.join('',',');
+        secondLine.push(character);        
     }
     // calculando o meio do valor n e adicionando espaços iguais a esse valor na primeira linha
     for(i=1;i<totem;i+=1){
@@ -78,8 +77,7 @@ function piramid(n){
     //primeira linha
     // adicionando primeiro caracter
     line.push(character);
-    for(x=1;x<totem;x+=1){
-        
+    for(x=1;x<totem;x+=1){        
         if(x==2){
             //segunda linha
             // adicionando primeiro espaço
@@ -92,18 +90,19 @@ function piramid(n){
             //antes de adicionar pares de espaços, remove o segundo caracter
             line.pop()
             for(y=1;y<=2;y+=1){
+                //adiciona pares de espaços
                 line.push(space);
             }
-            // readiciona o segundo caracter anteriormente removido para adiçao de espaços
+            // readiciona o segundo caracter 
             line.push(character);          
         }    
-        //removendo um espaço por linha até imediatamente antes da linha "totem-1"
+        //removendo um espaço do inicio da array por linha até imediatamente antes da linha "totem-1"
         if(x < totem){
             console.log(line.join('',','))
             
             line.shift(); 
         }
-        //adicionando ultima linha
+        //adicionando ultima linha "totem-1"
         if(x == totem-1){
             console.log(secondLine.join('',','));
         }                 
@@ -119,8 +118,7 @@ function piramid(n){
      for(let i=2;i<n;i+=1){
          resto = n % i;
          if( resto === 0){
-            console.log(`não é primo ${i}`);
-            
+            console.log(`não é primo ${i}`);            
             break;
         }        
      }

@@ -66,44 +66,67 @@ function piramid(n){
     let line = [];
     let secondLine = [];
     const totem= Math.ceil(n/2);
-    // fazendoa  ultima linha e armazenando em variavel
+    // fazendo a  ultima linha e armazenando em Array
     for(let j=1;j<=n;j+=1){
         secondLine.push(character);
         secondLine.join('',',');
     }
-
-    // calculando o meio do valor n
+    // calculando o meio do valor n e adicionando espaços iguais a esse valor na primeira linha
     for(i=1;i<totem;i+=1){
         line.push(space);
     }
+    //primeira linha
+    // adicionando primeiro caracter
     line.push(character);
     for(x=1;x<totem;x+=1){
-        // adicionando primeiro espaço
+        
         if(x==2){
+            //segunda linha
+            // adicionando primeiro espaço
             line.push(space);
-            //adicionando pares de espaços a cada linha
+            //adiciona segundo caracter
             line.push(character);
         }
-            if(x==3){
-                //antes de adicionar espaços remove o ultimo elemento
-                line.pop()
-                for(y=1;y<=2;y+=1){
-                    line.push(space);
-                }
-                line.push(character);          
+        if(x>=3 && x<=totem-1){
+            //terceira linha até a penultima
+            //antes de adicionar pares de espaços, remove o segundo caracter
+            line.pop()
+            for(y=1;y<=2;y+=1){
+                line.push(space);
             }
-        
+            // readiciona o segundo caracter anteriormente removido para adiçao de espaços
+            line.push(character);          
+        }    
+        //removendo um espaço por linha até imediatamente antes da linha "totem-1"
         if(x < totem){
             console.log(line.join('',','))
+            
             line.shift(); 
         }
+        //adicionando ultima linha
         if(x == totem-1){
             console.log(secondLine.join('',','));
-        }                     
-                
-    }                      
-                               
-  }
- 
- 
- piramidWithSpace(7);
+        }                 
+    }                                             
+  }  
+ piramidWithSpace(13);
+
+ function ISPRIME(n){
+     //lista de numeros contando de 2 em diante até o valor do de "n"
+     let divisiveis = [];
+     let resto ;
+     
+     for(let i=2;i<n;i+=1){
+         resto = n % i;
+         if( resto === 0){
+            console.log(`não é primo ${i}`);
+            
+            break;
+        }        
+     }
+     console.log(divisiveis);
+     if(divisiveis[0] == null){
+        console.log(`é primo `)
+     }
+ }
+ ISPRIME(5);
